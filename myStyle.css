@@ -103,3 +103,9 @@ input[type='number'] {
 .my-float :hover {
   color: white !important;
 }
+
+/* index page */
+
+.white-logo {
+  width: 65px !important;
+}
