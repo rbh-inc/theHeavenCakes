@@ -1,5 +1,7 @@
-const form = document.getElementById('review-submit-form');
+const reviewsFrom = document.getElementById('review-submit-form');
 const loadingSpinner = document.getElementById('loading-spinner');
+
+//? get the number of selected stars
 
 // Get all the radio buttons
 const ratingRadios = document.querySelectorAll('input[name="rating"]');
@@ -18,10 +20,11 @@ ratingRadios.forEach((radio) => {
   });
 });
 
-form.addEventListener('submit', function (e) {
+//? submit the reviews to the googel sheets
+reviewsFrom.addEventListener('submit', function (e) {
   e.preventDefault();
   loadingSpinner.style.display = 'block'; // toggle spinner on
-  var data = new FormData(form);
+  var data = new FormData(reviewsFrom);
   data.append('Stars', selectedStar);
   const action = e.target.action;
   console.log(data);
@@ -33,3 +36,10 @@ form.addEventListener('submit', function (e) {
     window.location.href = '/';
   });
 });
+
+//?? redirect to home page after contact form sends data to the formspree site
+function contactOnClickFunc() {
+  setTimeout(function () {
+    window.location.href = '/'; // Replace with your desired URL
+  }, 3000);
+}
