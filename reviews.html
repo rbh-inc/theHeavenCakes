@@ -277,7 +277,8 @@
             </div>
             <!-- Section Title End -->
 
-            <form id="review-submit-form">
+            <form id="review-submit-form"
+                action="https://script.google.com/macros/s/AKfycbyobaUd-HL5P8nYqjKdyMkGtf81V0YJ3j2ICSIz8XN3rUOuF7PaMk7O-OGiojKbRHEH/exec">
                 <div class="row justify-content-center">
                     <div class="col-mdz-10">
 
@@ -285,42 +286,67 @@
                             <div class="col-md-6">
                                 <!-- Contact Form Strat -->
                                 <div class="contact-form">
-                                    <input type="text" class="form-control" placeholder="First Name">
+                                    <input type="text" class="form-control" name="FirstName" placeholder="First Name">
                                 </div>
                                 <!-- Contact Form End -->
                             </div>
                             <div class="col-md-6">
                                 <!-- Contact Form Strat -->
                                 <div class="contact-form">
-                                    <input type="text" class="form-control" placeholder="Last Name">
+                                    <input type="text" class="form-control" name="LastName" placeholder="Last Name">
                                 </div>
                                 <!-- Contact Form End -->
                             </div>
                             <div class="col-md-6">
                                 <!-- Contact Form Strat -->
                                 <div class="contact-form">
-                                    <input type="email" class="form-control" placeholder="Email Address">
+                                    <input type="email" class="form-control" name="Email" placeholder="Email Address">
                                 </div>
                                 <!-- Contact Form End -->
                             </div>
                             <div class="col-md-6">
                                 <!-- Contact Form Strat -->
                                 <div class="contact-form">
-                                    <input type="text" class="form-control" placeholder="Phone Number">
+                                    <input type="text" class="form-control" name="PhoneNo" placeholder="Phone Number">
                                 </div>
                                 <!-- Contact Form End -->
                             </div>
                             <div class="col-lg-12">
                                 <!-- Contact Form Strat -->
                                 <div class="contact-form">
-                                    <textarea class="form-control" placeholder="Message"></textarea>
+                                    <textarea class="form-control" name="Message" placeholder="Message"></textarea>
                                 </div>
                                 <!-- Contact Form End -->
                             </div>
                             <div class="col-lg-12">
                                 <!-- Contact Form Strat -->
-                                <div class="contact-form mt-8 text-center">
+                                <div class="contact-form">
+                                    <div class="review-star-div">
+                                        <span>Select the Rating</span>
+                                        <div class="star-rating">
+                                            <input type="radio" id="5-stars" name="rating" value="5" />
+                                            <label for="5-stars" class="star">&#9733;</label>
+                                            <input type="radio" id="4-stars" name="rating" value="4" />
+                                            <label for="4-stars" class="star">&#9733;</label>
+                                            <input type="radio" id="3-stars" name="rating" value="3" />
+                                            <label for="3-stars" class="star">&#9733;</label>
+                                            <input type="radio" id="2-stars" name="rating" value="2" />
+                                            <label for="2-stars" class="star">&#9733;</label>
+                                            <input type="radio" id="1-star" name="rating" value="1" />
+                                            <label for="1-star" class="star">&#9733;</label>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                                <!-- Contact Form End -->
+                            </div>
+                            <div class="col-lg-12">
+                                <!-- Contact Form Strat -->
+                                <div class="contact-form mt-8 text-center form-submit-div">
                                     <button class="btn btn-secondary btn-hover-theme-color-01">Submit</button>
+                                    <div class="loader" id="loading-spinner"></div>
                                 </div>
                                 <!-- Contact Form End -->
                             </div>
@@ -417,10 +443,7 @@
         <div class="footer-copyright">
             <div class="container">
                 <!-- Footer Copyright Text Strat -->
-                <div class="footer-copyright-text text-center">
-                    <p>&copy; 2022 <strong> Bakerfresh </strong> Made with <i class="lastudioicon-heart-1"></i> by <a
-                            href="https://themeforest.net/user/bootxperts/portfolio">BootXperts</a></p>
-                </div>
+
                 <!-- Footer Copyright Text End -->
             </div>
         </div>
