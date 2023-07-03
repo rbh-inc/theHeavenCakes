@@ -77,3 +77,29 @@ input[type='number'] {
   align-items: center;
   justify-content: center;
 }
+
+/* floating whatsapp btn */
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  left: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 1px 1px 1.5px #999;
+  z-index: 100;
+}
+
+.my-float {
+  margin-top: 16px;
+}
+
+.float,
+.my-float :hover {
+  color: white !important;
+}
