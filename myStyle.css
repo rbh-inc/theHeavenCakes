@@ -109,3 +109,21 @@ input[type='number'] {
 .white-logo {
   width: 65px !important;
 }
+
+/* reviews cards */
+
+.reviews-cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.review-card {
+  width: 350px;
+}
+
+.testimonial-two_text {
+  height: 140px;
+  overflow-y: scroll;
+}

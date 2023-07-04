@@ -13,6 +13,13 @@
 
 
     <!-- CSS (Font, Vendor, Icon, Plugins & Style CSS files) -->
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- react cdns -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src='https://unpkg.com/babel-standalone@6.26.0/babel.js'></script>
 
     <!-- Font CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -166,97 +173,9 @@
 
         <!-- Testimonial Active Strat -->
         <div class="testimonial-active-two">
-            <div class="swiper">
-                <div class="swiper-wrapper">
+            <div class="reviews-cards-wrapper" id="reviewSection">
 
-                    <!-- swiper-slide start -->
-                    <!-- Testimonial Item Strat -->
-                    <div class="swiper-slide">
-                        <div class="testimonial-two text-center">
-                            <div class="testimonial-two_quote">
-                                <svg width="30" height="30" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M4.203 16c2.034 0 3.594-1.7 3.594-3.752 0-2.124-1.356-3.61-3.255-3.61-.339 0-.813.07-.881.07C3.864 6.442 5.831 3.611 8 2.124L5.492 0C2.372 2.336 0 6.3 0 10.62 0 14.087 1.966 16 4.203 16zm11 0c2.034 0 3.661-1.7 3.661-3.752 0-2.124-1.423-3.61-3.322-3.61-.339 0-.813.07-.881.07.271-2.266 2.17-5.097 4.339-6.584L16.492 0C13.372 2.336 11 6.3 11 10.62c0 3.468 1.966 5.38 4.203 5.38z"
-                                        fill="currentColor" fill-rule="nonzero"></path>
-                                </svg>
-                            </div>
-                            <p class="testimonial-two_text">It's amazing, the cakes here are so special that it's hard
-                                to describe, it's worth a try. I don't think I have ever eaten a better cake. I will be
-                                back again</p>
-                            <div class="testimonial-two_image">
-                                <img width="56" height="56" src="assets/images/avatar/testimoial-1.png" alt="Author">
-                            </div>
-                            <span class="testimonial-two_name">Esther Howard</span>
-                            <span class="testimonial-two_position">New Yourk</span>
-                        </div>
-                    </div>
-                    <!-- Testimonial Item End -->
-                    <!-- Testimonial Item Strat -->
-                    <div class="swiper-slide">
-                        <div class="testimonial-two text-center">
-                            <div class="testimonial-two_quote">
-                                <svg width="30" height="30" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M4.203 16c2.034 0 3.594-1.7 3.594-3.752 0-2.124-1.356-3.61-3.255-3.61-.339 0-.813.07-.881.07C3.864 6.442 5.831 3.611 8 2.124L5.492 0C2.372 2.336 0 6.3 0 10.62 0 14.087 1.966 16 4.203 16zm11 0c2.034 0 3.661-1.7 3.661-3.752 0-2.124-1.423-3.61-3.322-3.61-.339 0-.813.07-.881.07.271-2.266 2.17-5.097 4.339-6.584L16.492 0C13.372 2.336 11 6.3 11 10.62c0 3.468 1.966 5.38 4.203 5.38z"
-                                        fill="currentColor" fill-rule="nonzero"></path>
-                                </svg>
-                            </div>
-                            <p class="testimonial-two_text">It's amazing, the cakes here are so special that it's hard
-                                to describe, it's worth a try. I don't think I have ever eaten a better cake. I will be
-                                back again</p>
-                            <div class="testimonial-two_image">
-                                <img width="56" height="56" src="assets/images/avatar/testimoial-2.png" alt="Author">
-                            </div>
-                            <span class="testimonial-two_name">Elanor Pera</span>
-                            <span class="testimonial-two_position">Canada</span>
-                        </div>
-                    </div>
-                    <!-- Testimonial Item End -->
-                    <!-- Testimonial Item Strat -->
-                    <div class="swiper-slide">
-                        <div class="testimonial-two text-center">
-                            <div class="testimonial-two_quote">
-                                <svg width="30" height="30" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M4.203 16c2.034 0 3.594-1.7 3.594-3.752 0-2.124-1.356-3.61-3.255-3.61-.339 0-.813.07-.881.07C3.864 6.442 5.831 3.611 8 2.124L5.492 0C2.372 2.336 0 6.3 0 10.62 0 14.087 1.966 16 4.203 16zm11 0c2.034 0 3.661-1.7 3.661-3.752 0-2.124-1.423-3.61-3.322-3.61-.339 0-.813.07-.881.07.271-2.266 2.17-5.097 4.339-6.584L16.492 0C13.372 2.336 11 6.3 11 10.62c0 3.468 1.966 5.38 4.203 5.38z"
-                                        fill="currentColor" fill-rule="nonzero"></path>
-                                </svg>
-                            </div>
-                            <p class="testimonial-two_text">It's amazing, the cakes here are so special that it's hard
-                                to describe, it's worth a try. I don't think I have ever eaten a better cake. I will be
-                                back again</p>
-                            <div class="testimonial-two_image">
-                                <img width="56" height="56" src="assets/images/avatar/testimoial-3.png" alt="Author">
-                            </div>
-                            <span class="testimonial-two_name">Krishna Barbe</span>
-                            <span class="testimonial-two_position">Singapore</span>
-                        </div>
-                    </div>
-                    <!-- Testimonial Item End -->
-                    <!-- Testimonial Item Strat -->
-                    <div class="swiper-slide">
-                        <div class="testimonial-two text-center">
-                            <div class="testimonial-two_quote">
-                                <svg width="30" height="30" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M4.203 16c2.034 0 3.594-1.7 3.594-3.752 0-2.124-1.356-3.61-3.255-3.61-.339 0-.813.07-.881.07C3.864 6.442 5.831 3.611 8 2.124L5.492 0C2.372 2.336 0 6.3 0 10.62 0 14.087 1.966 16 4.203 16zm11 0c2.034 0 3.661-1.7 3.661-3.752 0-2.124-1.423-3.61-3.322-3.61-.339 0-.813.07-.881.07.271-2.266 2.17-5.097 4.339-6.584L16.492 0C13.372 2.336 11 6.3 11 10.62c0 3.468 1.966 5.38 4.203 5.38z"
-                                        fill="currentColor" fill-rule="nonzero"></path>
-                                </svg>
-                            </div>
-                            <p class="testimonial-two_text">It's amazing, the cakes here are so special that it's hard
-                                to describe, it's worth a try. I don't think I have ever eaten a better cake. I will be
-                                back again</p>
-                            <div class="testimonial-two_image">
-                                <img width="56" height="56" src="assets/images/avatar/testimoial-2.png" alt="Author">
-                            </div>
-                            <span class="testimonial-two_name">Esther Howard</span>
-                            <span class="testimonial-two_position">Dubai</span>
-                        </div>
-                    </div>
-                    <!-- Testimonial Item End -->
-                    <!-- swiper-slide end-->
 
-                </div>
             </div>
         </div>
         <!-- Testimonial Active End -->
@@ -378,7 +297,8 @@
                         <!-- Footer Widget Section Strat -->
                         <div class="footer-widget">
                             <div class="footer-widget__logo">
-                                <a href="index.html"><img src="assets/images/logo-03.svg" alt="Logo"></a>
+                                <a href="index.html"><img class="white-logo" src="./assets/imgs/iconwhite.png"
+                                        alt="Logo"></a>
                             </div>
                             <div class="footer-widget__social">
                                 <a href="#"><i class="lastudioicon-b-facebook"></i></a>
@@ -724,8 +644,58 @@
 
     <!-- Activation JS -->
     <script src="./assets/js/main.js"></script>
-
+    <!-- logic for the submission of reviews -->
     <script src="./myScript.js"></script>
+    <!-- fetch the reviews from google form and render on screen -->
+    <script type="text/babel">
+
+        function ReviewCard({ reviewMessage, fname, lname, stars }) {
+            return (
+
+                <div className="swiper-slide review-card">
+                    <div className="testimonial-two text-center">
+                        <div className="testimonial-two_quote">
+                            <svg width="30" height="30" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.203 16c2.034 0 3.594-1.7 3.594-3.752 0-2.124-1.356-3.61-3.255-3.61-.339 0-.813.07-.881.07C3.864 6.442 5.831 3.611 8 2.124L5.492 0C2.372 2.336 0 6.3 0 10.62 0 14.087 1.966 16 4.203 16zm11 0c2.034 0 3.661-1.7 3.661-3.752 0-2.124-1.423-3.61-3.322-3.61-.339 0-.813.07-.881.07.271-2.266 2.17-5.097 4.339-6.584L16.492 0C13.372 2.336 11 6.3 11 10.62c0 3.468 1.966 5.38 4.203 5.38z"
+                                    fill="currentColor" fill-rule="nonzero"></path>
+                            </svg>
+                        </div>
+                        <p className="testimonial-two_text">{reviewMessage}</p>
+
+                        <span className="testimonial-two_name">{fname} {lname}</span>
+                        <span className="testimonial-two_position"> {stars} <i class="fa fa-star"></i> star review </span>
+                    </div>
+                </div>
+            )
+        }
+
+        function ReviewCardsDiv() {
+
+            const [reviewsCardComponents, setReviewsCardComponent] = React.useState([]);
+
+            React.useEffect(() => {
+                console.log('react running')
+                fetch('https://script.google.com/macros/s/AKfycbxBevsMgEwWMaJUYdjFjlboYNQBtqIc4d8pp2EBzJwof8rJ8iEhD51K682sc_vIlGHW/exec')
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data)
+                        setReviewsCardComponent(data.map(review => {
+                            return (<ReviewCard reviewMessage={review.Message} fname={review.FirstName} lname={review.LastName} stars={review.Stars} />)
+                        }))
+
+                    })
+                    .catch(err => console.error(err));
+            }, [])
+            return (
+                reviewsCardComponents
+
+
+            )
+        }
+
+        ReactDOM.render(<ReviewCardsDiv />, document.querySelector('#reviewSection'));
+    </script>
 
 </body>
 
