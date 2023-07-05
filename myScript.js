@@ -23,11 +23,21 @@ ratingRadios.forEach((radio) => {
 //? submit the reviews to the googel sheets
 reviewsFrom.addEventListener('submit', function (e) {
   e.preventDefault();
-  loadingSpinner.style.display = 'block'; // toggle spinner on
+
+  // form validation check
   var data = new FormData(reviewsFrom);
   data.append('Stars', selectedStar);
-  const action = e.target.action;
   console.log(data);
+  for (var item of data.values()) {
+    if (item == '') {
+      alert('Fill all fields of the form!');
+      return; // Exit out of the event listener
+    }
+  }
+
+  loadingSpinner.style.display = 'block'; // toggle spinner on
+  const action = e.target.action;
+
   fetch(action, {
     method: 'POST',
     body: data,

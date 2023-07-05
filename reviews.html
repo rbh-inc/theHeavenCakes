@@ -206,24 +206,12 @@
                             <div class="col-md-6">
                                 <!-- Contact Form Strat -->
                                 <div class="contact-form">
-                                    <input type="text" class="form-control" name="FirstName" placeholder="First Name">
+                                    <input type="text" class="form-control" name="Name" placeholder="Name">
                                 </div>
                                 <!-- Contact Form End -->
                             </div>
-                            <div class="col-md-6">
-                                <!-- Contact Form Strat -->
-                                <div class="contact-form">
-                                    <input type="text" class="form-control" name="LastName" placeholder="Last Name">
-                                </div>
-                                <!-- Contact Form End -->
-                            </div>
-                            <div class="col-md-6">
-                                <!-- Contact Form Strat -->
-                                <div class="contact-form">
-                                    <input type="email" class="form-control" name="Email" placeholder="Email Address">
-                                </div>
-                                <!-- Contact Form End -->
-                            </div>
+
+
                             <div class="col-md-6">
                                 <!-- Contact Form Strat -->
                                 <div class="contact-form">
@@ -607,6 +595,7 @@
                 </button>
                 <div class="modal-body">
                     <i class="dlicon files_check"></i> Added To Wishlist Successfully!
+
                 </div>
             </div>
         </div>
@@ -649,7 +638,7 @@
     <!-- fetch the reviews from google form and render on screen -->
     <script type="text/babel">
 
-        function ReviewCard({ reviewMessage, fname, lname, stars }) {
+        function ReviewCard({ reviewMessage, name, stars }) {
             return (
 
                 <div className="swiper-slide review-card">
@@ -663,7 +652,7 @@
                         </div>
                         <p className="testimonial-two_text">{reviewMessage}</p>
 
-                        <span className="testimonial-two_name">{fname} {lname}</span>
+                        <span className="testimonial-two_name">{name}</span>
                         <span className="testimonial-two_position"> {stars} <i class="fa fa-star"></i> star review </span>
                     </div>
                 </div>
@@ -679,9 +668,8 @@
                 fetch('https://script.google.com/macros/s/AKfycbxBevsMgEwWMaJUYdjFjlboYNQBtqIc4d8pp2EBzJwof8rJ8iEhD51K682sc_vIlGHW/exec')
                     .then(response => response.json())
                     .then(data => {
-                        console.log(data)
                         setReviewsCardComponent(data.map(review => {
-                            return (<ReviewCard reviewMessage={review.Message} fname={review.FirstName} lname={review.LastName} stars={review.Stars} />)
+                            return (<ReviewCard reviewMessage={review.Message} name={review.Name} stars={review.Stars} />)
                         }))
 
                     })
@@ -689,7 +677,6 @@
             }, [])
             return (
                 reviewsCardComponents
-
 
             )
         }

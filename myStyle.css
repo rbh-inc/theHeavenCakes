@@ -124,6 +124,6 @@ input[type='number'] {
 }
 
 .testimonial-two_text {
-  height: 140px;
+  height: 100px;
   overflow-y: scroll;
 }
