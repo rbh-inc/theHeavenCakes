@@ -20,14 +20,20 @@ ratingRadios.forEach((radio) => {
   });
 });
 
-//? submit the reviews to the googel sheets
+//? submit the reviews to the google sheets
 reviewsFrom.addEventListener('submit', function (e) {
   e.preventDefault();
 
   // form validation check
   var data = new FormData(reviewsFrom);
   data.append('Stars', selectedStar);
-  console.log(data);
+
+  //? form validation for mobile number
+  if (data.get('PhoneNo').length !== 10) {
+    alert('Enter a valid Phone Number.');
+    return;
+  }
+
   for (var item of data.values()) {
     if (item == '') {
       alert('Fill all fields of the form!');
