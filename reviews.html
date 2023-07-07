@@ -289,10 +289,12 @@
                                         alt="Logo"></a>
                             </div>
                             <div class="footer-widget__social">
-                                <a href="#"><i class="lastudioicon-b-facebook"></i></a>
-                                <a href="#"><i class="lastudioicon-b-twitter"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=100091634807676"><i
+                                        class="lastudioicon-b-facebook"></i></a>
+
                                 <a href="#"><i class="lastudioicon-b-pinterest"></i></a>
-                                <a href="#"><i class="lastudioicon-b-instagram"></i></a>
+                                <a href="https://www.instagram.com/heavencakeskumbla/"><i
+                                        class="lastudioicon-b-instagram"></i></a>
                             </div>
                         </div>
                         <!-- Footer Widget Section End -->
@@ -314,18 +316,7 @@
                             </div>
                             <!-- Footer Widget End -->
 
-                            <!-- Footer Widget Strat -->
-                            <div class="footer-widget flex-grow-1">
-                                <h4 class="footer-widget__title">Services</h4>
 
-                                <ul class="footer-widget__link">
-                                    <li><a href="contact.html">Delivery</a></li>
-                                    <li><a href="contact.html">Payment</a></li>
-                                    <li><a href="contact.html">Returns</a></li>
-                                    <li><a href="contact.html">Privacy</a></li>
-                                </ul>
-                            </div>
-                            <!-- Footer Widget End -->
 
                             <!-- Footer Widget Strat -->
                             <div class="footer-widget flex-grow-1">
@@ -555,10 +546,11 @@
 
                                     <!-- Product Shear Start -->
                                     <div class="product-share">
-                                        <a href="#"><i class="lastudioicon-b-facebook"></i></a>
-                                        <a href="#"><i class="lastudioicon-b-twitter"></i></a>
-                                        <a href="#"><i class="lastudioicon-b-pinterest"></i></a>
-                                        <a href="#"><i class="lastudioicon-b-instagram"></i></a>
+                                        <a href="https://www.facebook.com/profile.php?id=100091634807676"><i
+                                                class="lastudioicon-b-facebook"></i></a>
+
+                                        <a href="https://www.instagram.com/heavencakeskumbla/"><i
+                                                class="lastudioicon-b-instagram"></i></a>
                                     </div>
                                     <!-- Product Shear End -->
 
@@ -663,12 +655,35 @@
 
             const [reviewsCardComponents, setReviewsCardComponent] = React.useState([]);
 
+
+            function getRandomItemsFromArray(arr) {
+                var count;
+                // calculate Count
+                if (arr.length > 9) {
+                    count = 9;
+                } else {
+                    count = arr.length
+                }
+                // Create a copy of the original array to avoid modifying it
+                const copyArray = arr.slice();
+
+                // Shuffle the array using the Fisher-Yates algorithm
+                for (let i = copyArray.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [copyArray[i], copyArray[j]] = [copyArray[j], copyArray[i]];
+                }
+
+                // Return a new array with the first 'count' items
+                return copyArray.slice(0, count);
+            }
+
             React.useEffect(() => {
                 console.log('react running')
                 fetch('https://script.google.com/macros/s/AKfycbxBevsMgEwWMaJUYdjFjlboYNQBtqIc4d8pp2EBzJwof8rJ8iEhD51K682sc_vIlGHW/exec')
                     .then(response => response.json())
                     .then(data => {
-                        setReviewsCardComponent(data.map(review => {
+                        const randomReviews = getRandomItemsFromArray(data,)
+                        setReviewsCardComponent(randomReviews.map(review => {
                             return (<ReviewCard reviewMessage={review.Message} name={review.Name} stars={review.Stars} />)
                         }))
 

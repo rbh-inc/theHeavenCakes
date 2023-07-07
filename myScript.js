@@ -34,6 +34,12 @@ reviewsFrom.addEventListener('submit', function (e) {
     return;
   }
 
+  //? form validation for stars
+  if (data.get('Star') === '0') {
+    alert('Select the Review Stars.');
+    return;
+  }
+
   for (var item of data.values()) {
     if (item == '') {
       alert('Fill all fields of the form!');
@@ -49,7 +55,7 @@ reviewsFrom.addEventListener('submit', function (e) {
     body: data,
   }).then(() => {
     loadingSpinner.style.display = 'none';
-    window.location.href = '/';
+    window.location.href = 'https://heavencakes.netlify.app/reviews.html';
   });
 });
 

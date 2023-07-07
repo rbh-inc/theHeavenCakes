@@ -122,8 +122,3 @@ input[type='number'] {
 .review-card {
   width: 350px;
 }
-
-.testimonial-two_text {
-  height: 100px;
-  overflow-y: scroll;
-}
